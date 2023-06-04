@@ -1,0 +1,453 @@
+
+LOGIN:
+
+
+db.login.insertMany([{User_id:"EVE001",Password:"Dd123**",Name:"Divya",DOB:"2004-06-29",City:"cbe",Email_id:"divya@gmail.com",Phone_no:"9342573263"},{User_id:"EVE002",Password:"Dk123**",Name:"Kavya",DOB:"2005-07-30",City:"Chennai",Email_id:"kavya@gmail.com",Phone_no:"9342573261"},{User_id:"EVE003",Password:"gg@@123",Name:"Glory",DOB:"2004-04-15",City:"cbe",Email_id:"glory@gmail.com",Phone_no:"9342573293"},{User_id:"EVE004",Password:"bb123**",Name:"Bhavna",DOB:"2003-05-29",City:"chennai",Email_id:"bhavna@gmail.com",Phone_no:"9342534263"},{User_id:"EVE005",Password:"am123**",Name:"Amirtha",DOB:"2005-06-25",City:"Madurai",Email_id:"ami@gmail.com",Phone_no:"9432573263"}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("63d72e37cb9d31b4cc57b234"),
+    '1': ObjectId("63d72e37cb9d31b4cc57b235"),
+    '2': ObjectId("63d72e37cb9d31b4cc57b236"),
+    '3': ObjectId("63d72e37cb9d31b4cc57b237"),
+    '4': ObjectId("63d72e37cb9d31b4cc57b238")
+  }
+}
+test> db.login.find();
+[
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b234"),
+    User_id: 'EVE001',
+    Password: 'Dd123**',
+    Name: 'Divya',
+    DOB: '2004-06-29',
+    City: 'cbe',
+    Email_id: 'divya@gmail.com',
+    Phone_no: '9342573263'
+  },
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b235"),
+    User_id: 'EVE002',
+    Password: 'Dk123**',
+    Name: 'Kavya',
+    DOB: '2005-07-30',
+    City: 'Chennai',
+    Email_id: 'kavya@gmail.com',
+    Phone_no: '9342573261'
+  },
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b236"),
+    User_id: 'EVE003',
+    Password: 'gg@@123',
+    Name: 'Glory',
+    DOB: '2004-04-15',
+    City: 'cbe',
+    Email_id: 'glory@gmail.com',
+    Phone_no: '9342573293'
+  },
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b237"),
+    User_id: 'EVE004',
+    Password: 'bb123**',
+    Name: 'Bhavna',
+    DOB: '2003-05-29',
+    City: 'chennai',
+    Email_id: 'bhavna@gmail.com',
+    Phone_no: '9342534263'
+  },
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b238"),
+    User_id: 'EVE005',
+    Password: 'am123**',
+    Name: 'Amirtha',
+    DOB: '2005-06-25',
+    City: 'Madurai',
+    Email_id: 'ami@gmail.com',
+    Phone_no: '9432573263'
+  }
+]
+
+INSERT ONE:
+
+       db.login.insertOne({User_id:"EVE006",Password:"rr123**",Name:"Deeksha",DOB:"2003-06-20",City:"Trichy",Email_id:"Deeksha@gmail.com",phone_no:"9092134589"})
+{
+  acknowledged: true,
+  insertedId: ObjectId("63d882d925614bf957116f11")
+}
+test> db.login.find();
+[
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b234"),
+    User_id: 'EVE001',
+    Password: 'Dd123**',
+    Name: 'Divya',
+    DOB: '2004-06-29',
+    City: 'Trichy',
+    Email_id: 'divya@gmail.com',
+    Phone_no: '9342573263'
+  },
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b235"),
+    User_id: 'EVE002',
+    Password: 'Dk123**',
+    Name: 'Kavya',
+    DOB: '2005-07-30',
+    City: 'Chennai',
+    Email_id: 'kavya@gmail.com',
+    Phone_no: '9342573261'
+  },
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b236"),
+    User_id: 'EVE003',
+    Password: 'gg@@123',
+    Name: 'Glory',
+    DOB: '2004-04-15',
+    City: 'Trichy',
+    Email_id: 'glory@gmail.com',
+    Phone_no: '9342573293'
+  },
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b237"),
+    User_id: 'EVE004',
+    Password: 'bb123**',
+    Name: 'Bhavna',
+    DOB: '2003-05-29',
+    City: 'chennai',
+    Email_id: 'bhavna@gmail.com',
+    Phone_no: '9342534263'
+  },
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b238"),
+    User_id: 'EVE005',
+    Password: 'am123**',
+    Name: 'Amirtha',
+    DOB: '2005-06-25',
+    City: 'Madurai',
+    Email_id: 'amirtha@gmail.com',
+    Phone_no: '9432573263'
+  },
+  {
+    _id: ObjectId("63d882d925614bf957116f11"),
+    User_id: 'EVE006',
+    Password: 'rr123**',
+    Name: 'Deeksha',
+    DOB: '2003-06-20',
+    City: 'Trichy',
+    Email_id: 'Deeksha@gmail.com',
+    phone_no: '9092134589'
+  }
+]
+
+EVENT1:
+   
+
+  db.event1.insertMany([{Event_code:"201",Event_type:"Technical"},{Event_code:"202",Event_type:"Non-Technical"},{Event_code:"203",Event_type:"Technical Quiz"},{Event_code:"204",Event_type:"Non-Technical Quiz"},{Event_code:"205",Event_type:"Debugging"}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("63d724ebcb9d31b4cc57b22f"),
+    '1': ObjectId("63d724ebcb9d31b4cc57b230"),
+    '2': ObjectId("63d724ebcb9d31b4cc57b231"),
+    '3': ObjectId("63d724ebcb9d31b4cc57b232"),
+    '4': ObjectId("63d724ebcb9d31b4cc57b233")
+  }
+}
+test> db.event1.find().pretty();
+[
+  {
+    _id: ObjectId("63d724ebcb9d31b4cc57b22f"),
+    Event_code: '201',
+    Event_type: 'Technical'
+  },
+  {
+    _id: ObjectId("63d724ebcb9d31b4cc57b230"),
+    Event_code: '202',
+    Event_type: 'Non-Technical'
+  },
+  {
+    _id: ObjectId("63d724ebcb9d31b4cc57b231"),
+    Event_code: '203',
+    Event_type: 'Technical Quiz'
+  },
+  {
+    _id: ObjectId("63d724ebcb9d31b4cc57b232"),
+    Event_code: '204',
+    Event_type: 'Non-Technical Quiz'
+  },
+  {
+    _id: ObjectId("63d724ebcb9d31b4cc57b233"),
+    Event_code: '205',
+    Event_type: 'Debugging'
+  }
+]
+ 
+
+DELETEONE:
+
+
+db.event1.deleteOne({Event_code:"203"})
+{ acknowledged: true, deletedCount: 1 }
+test> db.event1.find();
+[
+  {
+    _id: ObjectId("63d724ebcb9d31b4cc57b22f"),
+    Event_code: '201',
+    Event_type: 'Technical'
+  },
+  {
+    _id: ObjectId("63d724ebcb9d31b4cc57b230"),
+    Event_code: '202',
+    Event_type: 'Non-Technical'
+  },
+  {
+    _id: ObjectId("63d724ebcb9d31b4cc57b232"),
+    Event_code: '204',
+    Event_type: 'Non-Technical Quiz'
+  },
+  {
+    _id: ObjectId("63d724ebcb9d31b4cc57b233"),
+    Event_code: '205',
+    Event_type: 'Debugging'
+  }
+]
+ 
+
+DELETE MANY:
+
+ db.login.deleteMany({City:"Trichy"})
+{ acknowledged: true, deletedCount: 3 }
+test> db.login.find();
+[
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b237"),
+    User_id: 'EVE004',
+    Password: 'bb123**',
+    Name: 'Bhavna',
+    DOB: '2003-05-29',
+    City: 'chennai',
+    Email_id: 'bhavna@gmail.com',
+    Phone_no: '9342534263'
+  },
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b238"),
+    User_id: 'EVE005',
+    Password: 'am123**',
+    Name: 'Amirtha',
+    DOB: '2005-06-25',
+    City: 'Madurai',
+    Email_id: 'amirtha@gmail.com',
+    Phone_no: '9432573263'
+  }
+]
+
+UPDATEONE:
+
+ db.login.updateOne({Email_id:"ami@gmail.com"},{$set:{Email_id:"amirtha@gmail.com"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+test> db.login.find();
+[
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b234"),
+    User_id: 'EVE001',
+    Password: 'Dd123**',
+    Name: 'Divya',
+    DOB: '2004-06-29',
+    City: 'cbe',
+    Email_id: 'divya@gmail.com',
+    Phone_no: '9342573263'
+  },
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b235"),
+    User_id: 'EVE002',
+    Password: 'Dk123**',
+    Name: 'Kavya',
+    DOB: '2005-07-30',
+    City: 'Chennai',
+    Email_id: 'kavya@gmail.com',
+    Phone_no: '9342573261'
+  },
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b236"),
+    User_id: 'EVE003',
+    Password: 'gg@@123',
+    Name: 'Glory',
+    DOB: '2004-04-15',
+    City: 'cbe',
+    Email_id: 'glory@gmail.com',
+    Phone_no: '9342573293'
+  },
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b237"),
+    User_id: 'EVE004',
+    Password: 'bb123**',
+    Name: 'Bhavna',
+    DOB: '2003-05-29',
+    City: 'chennai',
+    Email_id: 'bhavna@gmail.com',
+    Phone_no: '9342534263'
+  },
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b238"),
+    User_id: 'EVE005',
+    Password: 'am123**',
+    Name: 'Amirtha',
+    DOB: '2005-06-25',
+    City: 'Madurai',
+    Email_id: 'amirtha@gmail.com',
+    Phone_no: '9432573263'
+  }
+]
+
+UPDATEMANY:
+ 
+     db.login.updateMany({City:"cbe"},{$set:{City:"Trichy"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+test> db.login.find();
+[
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b234"),
+    User_id: 'EVE001',
+    Password: 'Dd123**',
+    Name: 'Divya',
+    DOB: '2004-06-29',
+    City: 'Trichy',
+    Email_id: 'divya@gmail.com',
+    Phone_no: '9342573263'
+  },
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b235"),
+    User_id: 'EVE002',
+    Password: 'Dk123**',
+    Name: 'Kavya',
+    DOB: '2005-07-30',
+    City: 'Chennai',
+    Email_id: 'kavya@gmail.com',
+    Phone_no: '9342573261'
+  },
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b236"),
+    User_id: 'EVE003',
+    Password: 'gg@@123',
+    Name: 'Glory',
+    DOB: '2004-04-15',
+    City: 'Trichy',
+    Email_id: 'glory@gmail.com',
+    Phone_no: '9342573293'
+  },
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b237"),
+    User_id: 'EVE004',
+    Password: 'bb123**',
+    Name: 'Bhavna',
+    DOB: '2003-05-29',
+    City: 'chennai',
+    Email_id: 'bhavna@gmail.com',
+    Phone_no: '9342534263'
+  },
+  {
+    _id: ObjectId("63d72e37cb9d31b4cc57b238"),
+    User_id: 'EVE005',
+    Password: 'am123**',
+    Name: 'Amirtha',
+    DOB: '2005-06-25',
+    City: 'Madurai',
+    Email_id: 'amirtha@gmail.com',
+    Phone_no: '9432573263'
+  }
+]
+
+
+PAY:
+
+  FINDONE()
+
+       db.pay.insertMany([{Payment_id:"PEV01",Payment_amount:"1000",User_name:"Divya"},{Payment_id:"PEV02",Payment_amount:"1000",User_name:"Kavya"},{Payment_id:"PEV03",Payment_amount:"1500",User_name:"Glory"},{Payment_id:"PEV04",Payment_amount:"500",User_name:"Bhavna"},{Payment_id:"PEV05",Payment_amount:"500",User_name:"Amritha"}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("63d8797b25614bf957116f0c"),
+    '1': ObjectId("63d8797b25614bf957116f0d"),
+    '2': ObjectId("63d8797b25614bf957116f0e"),
+    '3': ObjectId("63d8797b25614bf957116f0f"),
+    '4': ObjectId("63d8797b25614bf957116f10")
+  }
+}
+test> db.pay.findOne();
+{
+  _id: ObjectId("63d8797b25614bf957116f0c"),
+  Payment_id: 'PEV01',
+  Payment_amount: '1000',
+  User_name: 'Divya'
+}
+
+DELETEMANY:
+   
+
+   
+ORGANISER:
+
+    db.createCollection("Organiser")
+{ ok: 1 }
+test> db.Organiser.insertMany([{Or_id:"0R001",Or_name:"Vijay",Or_contact_no:"9891324516",Email_id:"vijay@gmail.com"},{Or_id:"0R002",Or_name:"Ram",Or_contact_no:"9294354189",Email_id:"ram@gmail.com"},{Or_id:"0R003",Or_name:"Ramya",Or_contact_no:"9294304189",Email_id:"ramya@gmail.com"},{Or_id:"0R004",Or_name:"Sheela",Or_contact_no:"9294354179",Email_id:"sheela@gmail.com"},{Or_id:"0R005",Or_name:"Vidhya",Or_contact_no:"9294354289",Email_id:"vidhya@gmail.com"}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("63d88a0025614bf957116f12"),
+    '1': ObjectId("63d88a0025614bf957116f13"),
+    '2': ObjectId("63d88a0025614bf957116f14"),
+    '3': ObjectId("63d88a0025614bf957116f15"),
+    '4': ObjectId("63d88a0025614bf957116f16")
+  }
+}
+test> db.Organiser.find();
+[
+  {
+    _id: ObjectId("63d88a0025614bf957116f12"),
+    Or_id: '0R001',
+    Or_name: 'Vijay',
+    Or_contact_no: '9891324516',
+    Email_id: 'vijay@gmail.com'
+  },
+  {
+    _id: ObjectId("63d88a0025614bf957116f13"),
+    Or_id: '0R002',
+    Or_name: 'Ram',
+    Or_contact_no: '9294354189',
+    Email_id: 'ram@gmail.com'
+  },
+  {
+    _id: ObjectId("63d88a0025614bf957116f14"),
+    Or_id: '0R003',
+    Or_name: 'Ramya',
+    Or_contact_no: '9294304189',
+    Email_id: 'ramya@gmail.com'
+  },
+  {
+    _id: ObjectId("63d88a0025614bf957116f15"),
+    Or_id: '0R004',
+    Or_name: 'Sheela',
+    Or_contact_no: '9294354179',
+    Email_id: 'sheela@gmail.com'
+  },
+  {
+    _id: ObjectId("63d88a0025614bf957116f16"),
+    Or_id: '0R005',
+    Or_name: 'Vidhya',
+    Or_contact_no: '9294354289',
+    Email_id: 'vidhya@gmail.com'
+  }
+]
+
+
